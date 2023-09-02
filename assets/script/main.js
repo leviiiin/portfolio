@@ -1,3 +1,4 @@
+// top scroll
 const btnUp = {
     el: document.querySelector('.btn-up'),
     show() {
@@ -21,3 +22,10 @@ const btnUp = {
     }
 }
 btnUp.addEventListener();
+
+// mobile menu script
+const burger = document.querySelector('.burger');
+burger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.menu').classList.toggle('open');
+})
