@@ -11,12 +11,32 @@
 
 /* Colors */
 :root {
-    --turquoise: #66FCF1;
-    --dark-turquoise: #45A29E;
+    --color-primary: #66FCF1;
+    --color-secondary: #45A29E;
     --gray: #C5C6C7;
     --dark-gray: #1F2833;
     --black: #0B0C10;
     --bg: #141416;
+}
+
+.theme-light {
+    --bg: rgb(255, 255, 255);
+    --font-color: #000000;
+    --color-primary: #66FCF1;
+    --color-secondary: #000000;
+    --form-color: rgba(0, 0, 0, 0.8);
+    --form-font: var(--color-primary);
+    --bw-color: black;
+}
+
+.theme-dark {
+    --bg: #141416;
+    --font-color: #C5C6C7;
+    --color-primary: #66FCF1;
+    --color-secondary: #45A29E;
+    --form-color: rgba(42, 42, 42, 0.8);
+    --form-font: var(--color-primary);
+    --bw-color: white;
 }
 
 body {
@@ -24,7 +44,7 @@ body {
     font-family: 'Source Code Pro', monospace;
     font-size: 18px;
     font-weight: 400;
-    color: var(--gray);
+    color: var(--font-color);
     height: 2000px;
 }
 
@@ -38,21 +58,23 @@ main {
     padding: 0 15px;
 }
 
-button, .button {
+button,
+.button {
     background: transparent;
-    color: var(--turquoise);
+    color: #66FCF1;
     font-family: 'Source Code Pro', monospace;
     font-size: 18px;
     font-weight: 600;
     padding: 8px 22px;
-    border: 2px solid var(--turquoise);
+    border: 2px solid #66FCF1;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.4s ease-in;
 }
 
-button:hover, .button:hover {
-    background: var(--turquoise);
+button:hover,
+.button:hover {
+    background: #66FCF1;
     color: var(--black);
     transition: all 0.4s ease-in;
 }
@@ -81,17 +103,23 @@ li {
 
 a {
     text-decoration: none;
-    color: var(--dark-turquoise);
+    color: var(--color-secondary);
     font-size: 20px;
     font-weight: 700;
     transition: .3s;
 }
 
 a:hover {
-    color: var(--turquoise);
+    color: var(--color-secondary);
 }
 
-input, textarea {
+section {
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+}
+
+input,
+textarea {
     outline: none;
     border: none;
     font-family: 'Source Code Pro', monospace;
@@ -131,7 +159,7 @@ body::-webkit-scrollbar {
     height: 2px;
     width: 100%;
     transform: scale(1);
-    background-color: var(--dark-turquoise);
+    background-color: var(--color-secondary);
 }
 
 .burger::before,
@@ -140,14 +168,14 @@ body::-webkit-scrollbar {
     position: absolute;
     height: 2px;
     width: 100%;
-    background-color: var(--dark-turquoise);
+    background-color: var(--color-secondary);
     transition: all 0.3s ease 0%;
 }
 
 .burger:hover span,
 .burger:hover::before,
 .burger:hover::after {
-    background-color: var(--turquoise);
+    background-color: #00ffee;
     transition: all 0.4s ease-in-out;
 }
 
@@ -179,8 +207,17 @@ body::-webkit-scrollbar {
     transform: rotate(45deg) translate(0, 50%);
 }
 
+.header-r {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
 
 /* hero */
+.hero {
+    padding-top: 0;
+}
+
 .hero__content {
     display: flex;
     align-items: start;
@@ -189,7 +226,7 @@ body::-webkit-scrollbar {
 }
 
 .hero__title span {
-    color: var(--turquoise);
+    color: var(--color-primary);
 }
 
 .hero__text {
@@ -246,14 +283,11 @@ body::-webkit-scrollbar {
 .hero__link:hover i {
     transform: rotate(90deg);
     transition: 0.8s;
+    color: var(--color-secondary);
 }
 
 
 /* About */
-.about {
-    margin-top: 50vh;
-}
-
 .about__content {
     display: flex;
     align-items: start;
@@ -262,13 +296,13 @@ body::-webkit-scrollbar {
 }
 
 .about__title {
-    color: var(--turquoise);
+    color: var(--color-primary);
     display: flex;
     flex-direction: column;
 }
 
 .about__title span {
-    color: var(--gray);
+    color: var(--font-color);
     font-size: 40px;
     font-weight: 500;
 }
@@ -279,10 +313,6 @@ body::-webkit-scrollbar {
 
 
 /* Skills */
-.skills {
-    margin-top: 50vh;
-}
-
 .skills__content {
     display: flex;
     flex-direction: column;
@@ -290,7 +320,7 @@ body::-webkit-scrollbar {
 }
 
 .skills__title span {
-    color: var(--turquoise);
+    color: var(--color-primary);
 }
 
 .skills__block {
@@ -304,7 +334,7 @@ body::-webkit-scrollbar {
 
 .skills__content .skills__block i {
     font-size: 100px;
-    color: rgb(255, 255, 255, 0.7);
+    color: var(--font-color);
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
@@ -315,9 +345,6 @@ body::-webkit-scrollbar {
 }
 
 /* Project */
-.projects {
-    margin-top: 50vh;
-}
 .projects__content {
     display: flex;
     flex-direction: column;
@@ -325,7 +352,7 @@ body::-webkit-scrollbar {
 }
 
 .projects__title {
-    color: var(--turquoise);
+    color: var(--color-primary);
     padding-bottom: 30px;
 }
 
@@ -360,8 +387,8 @@ body::-webkit-scrollbar {
     box-shadow: -3px 3px 5px rgba(64, 224, 208, 0.5);
 }
 
-.project__title{
-    color: rgb(0, 255, 238, 0.8);
+.project__title {
+    color: var(--color-secondary);
 }
 
 .project p {
@@ -370,7 +397,7 @@ body::-webkit-scrollbar {
 
 .project p span {
     font-weight: 700;
-    color: #c4c4c4;
+    color: var(--font-color);
 }
 
 .project__link {
@@ -387,18 +414,23 @@ body::-webkit-scrollbar {
 
 /* Contact */
 .contact {
-    margin-top: 50vh;
-    padding-bottom: 50vh;
+    padding-bottom: 0;
 }
 
 .contact__content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 50px;
 }
 
-.email-form{
-    background: rgba(99, 99, 99, 0.2);
+.contact__title {
+    color: var(--color-primary);
+}
+
+.email-form {
+    background: var(--form-color);
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -417,7 +449,7 @@ body::-webkit-scrollbar {
 .email-form div label {
     padding-left: 5px;
     padding-bottom: 7px;
-    color: var(--turquoise);
+    color: var(--form-font);
     font-weight: 300;
 }
 
@@ -425,15 +457,47 @@ body::-webkit-scrollbar {
     color: red;
 }
 
-.email-form div input, .email-form div textarea {
-    border-radius: 5px;
+.email-form div input,
+.email-form div textarea {
+    border-radius: 10px;
     padding: 5px 10px 5px 10px;
+    background: #e1e1e1;
+    transition: all 0.3s;
 }
 
+.email-form div input:focus,
+.email-form div textarea:focus {
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
 
+.messengers {
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
 
+.messenger {
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
 
+.bi-github:hover {
+    border-color: var(--bw-color);
+}
 
+.messenger:hover {
+    border-color: var(--logoColor);
+    color: var(--logoColor);
+    transition: all 0.5s ease-in-out;
+}
 
 
 
@@ -469,7 +533,12 @@ body::-webkit-scrollbar {
 .menu__link {
     font-size: 30px;
     font-weight: 800;
-    border-bottom: 1px solid var(--dark-turquoise);
+    border-bottom: 1px solid;
+    color: #45A29E;
+}
+
+.menu__link:hover {
+    color: #66FCF1;
 }
 
 .open {
@@ -485,6 +554,76 @@ body::-webkit-scrollbar {
         opacity: 1;
     }
 }
+
+/* Theme switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: -1px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: rgb(0, 0, 0) url('https://i.ibb.co/FxzBYR9/night.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:checked+.slider {
+    background-color: #21f3f3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #21f3f3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    background: rgb(255, 255, 255) url('https://i.ibb.co/7JfqXxB/sunny.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 
 /* button up */
 .btn-up {
