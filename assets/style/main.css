@@ -94,6 +94,9 @@ a:hover {
 input, textarea {
     outline: none;
     border: none;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 body::-webkit-scrollbar {
@@ -422,11 +425,9 @@ body::-webkit-scrollbar {
     color: red;
 }
 
-.email-form div input {
-    width: 100%;
-    height: 25px;
+.email-form div input, .email-form div textarea {
     border-radius: 5px;
-    padding: ;
+    padding: 5px 10px 5px 10px;
 }
 
 
