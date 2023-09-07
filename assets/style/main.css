@@ -45,7 +45,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     color: var(--font-color);
-    height: 2000px;
+    overflow-x: hidden;
 }
 
 main {
@@ -131,6 +131,10 @@ body::-webkit-scrollbar {
     width: 0;
 }
 
+.stop-scroll {
+    overflow: hidden;
+}
+
 
 /* Header */
 .header__content {
@@ -212,6 +216,7 @@ body::-webkit-scrollbar {
     align-items: center;
     gap: 50px;
 }
+
 
 /* hero */
 .hero {
@@ -359,7 +364,7 @@ body::-webkit-scrollbar {
 .projects__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 100px;
     align-items: center;
     justify-content: center;
 }
@@ -489,16 +494,15 @@ body::-webkit-scrollbar {
     transition: all 0.5s ease-in-out;
 }
 
-.bi-github:hover {
-    border-color: var(--bw-color);
-}
-
 .messenger:hover {
     border-color: var(--logoColor);
     color: var(--logoColor);
     transition: all 0.5s ease-in-out;
 }
 
+.bi-github {
+    color: var(--bw-color);
+}
 
 
 
@@ -640,6 +644,117 @@ input:checked+.slider:before {
 
 .btn-up_hide {
     display: none;
+}
+
+
+/* DECOR */
+.dots_decor {
+    position: absolute;
+    z-index: -1;
+    transform: rotate(90deg);
+}
+
+.dots1 {
+    top: -400px;
+    right: -310px;
+}
+
+.dots2 {
+    top: 1550px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.dark__romb {
+    position: absolute;
+    top: 700px;
+    right: 100px;
+    z-index: -1;
+}
+
+.dark__cube1 {
+    position: absolute;
+    top: 1600px;
+    left: 100px;
+    z-index: -1;
+}
+
+.sphere {
+    position: absolute;
+    top: 2500px;
+    right: 100px;
+    z-index: -1;
+    box-shadow: 40px 40px 70px rgb(0, 0, 0, 0.7);
+    border-radius: 50%;
+}
+
+.dark__romb2 {
+    position: absolute;
+    top: 3800px;
+    left: 0;
+    z-index: -1;
+}
+
+.romb1, .romb2, .romb3, .romb4 {
+    position: absolute;
+    z-index: -1;
+    width: 150px;
+}
+
+.romb1 {
+    top: 500px;
+    left: 200px;
+}
+
+.romb2 {
+    top: 1600px;
+    right: 100px;
+}
+
+.romb3 {
+    top: 3700px;
+    right: 400px;
+}
+
+.romb4 {
+    top: 4750px;
+    right: 50px;
+}
+
+.all-bg-gecor {
+    position: absolute;
+    z-index: -1;
+    width: 650px;
+    filter: blur(4px);
+}
+
+.bg-decor1{
+    top: 500px;
+    left: -350px;
+    transform: rotate(180deg);
+}
+
+.bg-decor2{
+    top: 1460px;
+    right: -350px;
+}
+
+.bg-decor3{
+    top: 2350px;
+    left: -350px;
+    transform: rotate(180deg);
+}
+
+.bg-decor4{
+    top: 3250px;
+    right: -350px;
+}
+
+.bg-decor5{
+    top: 4100px;
+    left: -350px;
+    transform: rotate(180deg);
 }
 
 /* Media */

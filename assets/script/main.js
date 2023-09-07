@@ -1,8 +1,33 @@
 // mobile menu script
 const burger = document.querySelector('.burger');
+const body = document.getElementById('body');
+const menu = document.getElementById('menu');
+const m_li = document.getElementById('m-li');
+
 burger.addEventListener('click', function () {
-    this.classList.toggle('active');
-    document.querySelector('.menu').classList.toggle('open');
+    burger.classList.toggle('active');
+    menu.classList.toggle('open');
+    if (burger.classList.contains('active')) {
+        body.classList.add('stop-scroll');
+    }
+    else {
+        body.classList.remove('stop-scroll');
+    }
+
+    document.addEventListener('click', (e) => {
+        const withinBoundaries = e.composedPath().includes(burger);
+        if (!withinBoundaries & burger.classList.contains('active')) {
+            burger.classList.remove('active');
+            menu.classList.remove('open')
+            body.classList.remove('stop-scroll');
+        }
+    })
+
+    m_li.addEventListener('click', function () {
+        burger.classList.remove('active');
+        menu.classList.remove('open')
+        body.classList.remove('stop-scroll');
+    })
 })
 
 // top scroll
@@ -50,6 +75,6 @@ function toggleTheme() {
         document.getElementById('slider').checked = false;
     } else {
         setTheme('theme-light');
-      document.getElementById('slider').checked = true;
+        document.getElementById('slider').checked = true;
     }
 })();
