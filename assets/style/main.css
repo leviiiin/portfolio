@@ -20,7 +20,7 @@
 }
 
 .theme-light {
-    --bg: rgb(255, 255, 255);
+    --bg: #836FFF;
     --font-color: #000000;
     --color-primary: #66FCF1;
     --color-secondary: #000000;
@@ -219,15 +219,26 @@ body::-webkit-scrollbar {
 
 
 /* hero */
+main {
+    padding: 0;
+}
+
 .hero {
     padding-top: 0;
+    align-items: center;
+    position: relative;
 }
 
 .hero__content {
+    padding-top: 120px;
     display: flex;
     align-items: start;
     justify-content: center;
     gap: 100px;
+}
+
+.hero__title {
+    color: white;
 }
 
 .hero__title span {
@@ -242,6 +253,7 @@ body::-webkit-scrollbar {
 }
 
 .hero__description {
+    color: white;
     max-width: 470px;
 }
 
@@ -277,18 +289,21 @@ body::-webkit-scrollbar {
     display: flex;
     font-size: 18px;
     font-weight: 300;
+    color: turquoise;
+}
+
+.hero__link:hover {
+    color: #66FCF1;
 }
 
 .hero__link i {
     font-size: 20px;
     transition: 0.8s;
-
 }
 
 .hero__link:hover i {
     transform: rotate(90deg);
     transition: 0.8s;
-    color: var(--color-secondary);
 }
 
 
@@ -696,10 +711,14 @@ input:checked+.slider:before {
     z-index: -1;
 }
 
-.romb1, .romb2, .romb3, .romb4 {
+.romb1,
+.romb2,
+.romb3,
+.romb4 {
     position: absolute;
     z-index: -1;
     width: 150px;
+    filter: drop-shadow(10px 10px 0.8rem rgb(0, 158, 161));
 }
 
 .romb1 {
@@ -729,34 +748,102 @@ input:checked+.slider:before {
     filter: blur(4px);
 }
 
-.bg-decor1{
+.bg-decor1 {
     top: 500px;
     left: -350px;
     transform: rotate(180deg);
 }
 
-.bg-decor2{
+.bg-decor2 {
     top: 1460px;
     right: -350px;
 }
 
-.bg-decor3{
+.bg-decor3 {
     top: 2350px;
     left: -350px;
     transform: rotate(180deg);
 }
 
-.bg-decor4{
+.bg-decor4 {
     top: 3250px;
     right: -350px;
 }
 
-.bg-decor5{
+.bg-decor5 {
     top: 4100px;
     left: -350px;
     transform: rotate(180deg);
 }
 
+/* stars animation */
+.stars {
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+
+.star-1 {
+    top: 100px;
+    left: 200px;
+    animation-name: twinkle-1;
+    animation-duration: 1.3s;
+}
+
+.star-2 {
+    top: 150px;
+    right: 100px;
+    animation-name: twinkle-2;
+    animation-duration: 1.2s;
+}
+
+.star-3 {
+    top: 500px;
+    left: 650px;
+    animation-name: twinkle-1;
+    animation-duration: 1.5s;
+}
+
+.star-4 {
+    top: 800px;
+    right: 250px;
+    animation-name: twinkle-2;
+    animation-duration: 1.2s;
+}
+
+.star-5 {
+    top: 900px;
+    left: 300px;
+    animation-name: twinkle-1;
+    animation-duration: 1.7s;
+}
+
+@keyframes twinkle-1 {
+    50% {
+        transform: scale(0.4);
+        opacity: 0.4;
+    }
+}
+
+@keyframes twinkle-2 {
+    20% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+}
+
+#back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+}
+
 /* Media */
 
 @media screen and (max-width: 1024px) {}
+
+
