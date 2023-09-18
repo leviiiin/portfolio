@@ -228,7 +228,6 @@
         integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="./assets/script/main.js"></script>
     <script>
         $(document).ready(function () {
             $(".btn-up").hide();
@@ -256,8 +255,19 @@
                 $("body,html").animate({ scrollTop: destination }, 800);
             });
         });
-    </script>
 
+        $(document).ready(function () {
+            $(".menu__li a").click(function () {
+                $(".burger").removeClass("active");
+                $(".menu").removeClass("open");
+                $("body").removeClass("stop-scroll");
+            });
+        });
+
+
+
+    </script>
+    <script src="./assets/script/main.js"></script>
 </body>
 
 </html>
