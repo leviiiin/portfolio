@@ -61,7 +61,7 @@
         <!-- ABOUT -->
         <section class="about" id="about">
             <div class="container">
-                <div class="about__content">
+                <div class="about__content text-animation">
                     <h2 class="h1 about__title">
                         Hi, I`m Ihor Levin
                         <span>Web Developer</span>
@@ -86,7 +86,7 @@
         <!-- SKILLS -->
         <section class="skills" id="skills">
             <div class="container">
-                <div class="skills__content">
+                <div class="skills__content text-animation">
                     <h2 class="skills__title">
                         <span>Skills</span>
                         & Experience
@@ -95,11 +95,9 @@
                         <i style="--color:#E44D26" class="devicon-html5-plain-wordmark colored"></i>
                         <i style="--color:#2965f1" class="devicon-css3-plain-wordmark colored"></i>
                         <i style="--color:#f0db4f" class="devicon-javascript-plain colored"></i>
-                        <i style="--color:#0078d7" class="devicon-vscode-plain-wordmark colored"></i>
                         <i style="--color:#f34f29" class="devicon-git-plain colored"></i>
                         <i style="--color:#3dc5ac" class="devicon-figma-plain colored"></i>
                         <i style="--color:#59287a" class="devicon-bootstrap-plain-wordmark colored"></i>
-
                     </div>
                 </div>
                 <i class="bi bi-star-fill stars star-1"></i>
@@ -114,7 +112,7 @@
                 <div class="projects__content">
                     <h2 class="projects__title">Projects</h2>
                     <div class="projects__list">
-                        <div class="project">
+                        <div class="project block-animation">
                             <img src="./static/img/zone.png" alt="zone">
                             <p class="project__title">
                                 Page layout for business-consulting website ZONE
@@ -127,7 +125,7 @@
                                 <i class="bi bi-arrow-right-short"></i>
                             </a>
                         </div>
-                        <div class="project">
+                        <div class="project block-animation">
                             <img src="./static/img/habbit.png" alt="habbit">
                             <p class="project__title">
                                 Application for creating and fulfilling Habits
@@ -152,37 +150,39 @@
         <section class="contact" id="contact">
             <div class="container">
                 <div class="contact__content">
-                    <h2 class="contact__title">Leave your message</h2>
-                    <form class="email-form" autocomplete="off" action="/email.php" method="post">
-                        <div>
-                            <label>Name <span>*</span></label>
-                            <input type="text" name="username">
+                    <h3 class="contact__title">Contact me in a way convenient for you</h2>
+                        <div class="messengers">
+                            <a href="" class="messenger gmail" style="--logoColor:red">
+                                <svg class="gmail-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
+                                    width="48px" height="48px">
+
+                                    <path style="--path-color:#4caf50" fill="black"
+                                        d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z" />
+
+                                    <path style="--path-color:#1e88e5" fill="black"
+                                        d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z" />
+
+                                    <polygon style="--path-color:#e53935" fill="black"
+                                        points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17" />
+
+                                    <path style="--path-color:#c62828" fill="black"
+                                        d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z" />
+
+                                    <path style="--path-color:#fbc02d" fill="black"
+                                        d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z" />
+                                </svg>
+                            </a>
+                            <a href="https://t.me/igrlvn" class="messenger" style="--logoColor:#27A7E7">
+                                <i class="bi bi-telegram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ihor-levin-5233a028a" class="messenger"
+                                style="--logoColor:#0077B5">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/leviiiin" class="messenger">
+                                <i class="bi bi-github"></i>
+                            </a>
                         </div>
-                        <div>
-                            <label>Email <span>*</span></label>
-                            <input type="email" name="useremail">
-                        </div>
-                        <div>
-                            <label>Messange <span>*</span></label>
-                            <textarea name="text" cols="45" rows="10"></textarea>
-                        </div>
-                        <input class="button" type="submit" value="Send">
-                    </form>
-                    <div class="messengers">
-                        <a href="" class="messenger" style="--logoColor:#C13584">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="https://t.me/igrlvn" class="messenger" style="--logoColor:#27A7E7">
-                            <i class="bi bi-telegram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/ihor-levin-5233a028a" class="messenger"
-                            style="--logoColor:#0077B5">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/leviiiin" class="messenger">
-                            <i class="bi bi-github"></i>
-                        </a>
-                    </div>
                 </div>
                 <i class="bi bi-star-fill stars star-1"></i>
                 <i class="bi bi-star-fill stars star-2"></i>
@@ -225,6 +225,39 @@
 
     <!-- SCRIPTS -->
     <script src="./assets/script/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn-up").hide();
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $(".btn-up").fadeIn();
+                } else {
+                    $(".btn-up").fadeOut();
+                }
+            });
+
+            $(".btn-up").click(function () {
+                $("body,html").animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        });
+
+        $(document).ready(function () {
+            $(".menu__li a, .hero__text a").click(function () {
+                elementClick = $(this).attr("href");
+                destination = $(elementClick).offset().top;
+                $("body,html").animate({ scrollTop: destination }, 800);
+            });
+        });
+    </script>
+
 </body>
 
 </html>
