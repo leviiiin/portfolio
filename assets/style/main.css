@@ -115,8 +115,8 @@ a:hover {
 }
 
 section {
-    padding-top: 17vh;
-    padding-bottom: 17vh;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 input,
@@ -901,6 +901,10 @@ input:checked+.slider:before {
         max-width: 400px;
     }
 
+    .romb2 {
+        top: 80%;
+    }
+
     .romb4 {
         left: 0;
     }
@@ -909,11 +913,20 @@ input:checked+.slider:before {
         flex: 200px;
     }
 
+    .messengers {
+        gap: 20px;
+    }
 }
 
 @media screen and (max-width: 425px) {
     .hero__content {
-        padding-top: 20px;
+        padding-top: 5px;
+        gap: 20px;
+    }
+
+    .hero__text {
+        gap: 10px;
+        padding: 0;
     }
 
     .hero__title {
@@ -921,7 +934,11 @@ input:checked+.slider:before {
     }
 
     .hero__description {
-        font-size: 18px;
+        font-size: 17px;
+    }
+
+    .hero__img {
+        max-width: 220px;
     }
 
     .email-form {
@@ -929,25 +946,30 @@ input:checked+.slider:before {
     }
 
     .romb2 {
-        top: 10%;
+        top: 0;
     }
 
     .romb4 {
-        top: 5%;
+        top: 0;
     }
 
     .skills__block>* {
         flex: 100px;
+    }
+
+    .messengers {
+        gap: 30px;
+    }
+
+    .messenger {
+        padding: 0;
+        border: 0;
     }
 }
 
 @media screen and (max-width: 375px) {
     .email-form {
         max-width: 250px;
-    }
-
-    .hero__img {
-        max-width: 280px;
     }
 }
 
@@ -958,7 +980,7 @@ input:checked+.slider:before {
     .about__title span,
     .skills__title,
     .projects__title {
-        font-size: 23px;
+        font-size: 24px;
     }
 
     .hero__description,
@@ -989,5 +1011,47 @@ input:checked+.slider:before {
 
     .dark__cube1 {
         top: 80%;
+    }
+
+    .hero__content{
+        padding-top: 10px;
+        gap: 20px;
+    }
+
+    .hero__link{
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+
+    .romb1,
+    .romb2,
+    .romb3,
+    .romb4 {
+        width: 100px;
+    }
+
+    .romb2,
+    .romb3 {
+        top: -5%;
+    }
+
+    .romb3 {
+        left: 10%;
+    }
+
+    .romb4{
+        top: -10%;
+        left: 20%;
+    }
+
+    .dark__cube1 {
+        width: 200px;
+        left: 35%;
+    }
+ 
+    .sphere {
+        width: 100px;
     }
 }
