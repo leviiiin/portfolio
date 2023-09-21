@@ -148,7 +148,6 @@ body::-webkit-scrollbar {
     display: grid;
     place-items: center;
     transition: 0.5s ease-in-out;
-
 }
 
 .loaded__hidding .preloader {

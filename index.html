@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="./assets/style/main.css">
 </head>
 
+<!-- preloader script -->
 <script>
     window.onload = function () {
         document.body.classList.add('loaded__hiding');
+        document.body.classList.add('stop-scroll');
         window.setTimeout(function () {
             document.body.classList.add('loaded');
             document.body.classList.remove('loaded__hiding');
+            document.body.classList.remove('stop-scroll');
         }, 2000);
     }
 </script>
@@ -241,9 +244,7 @@
     <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
         integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="./assets/script/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
             $(".btn-up").hide();
@@ -279,10 +280,9 @@
                 $("body").removeClass("stop-scroll");
             });
         });
-
-
-
     </script>
+    <script src="./assets/script/main.js"></script>
+
 </body>
 
 </html>

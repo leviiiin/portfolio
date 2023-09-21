@@ -97,14 +97,3 @@ SmoothScroll({
     accelerationMax: 2,
     touchpadSupport: true,
 })
-
-function scrollNav() {
-    $('#m-li a').click(function () {
-        $('html, body').stop().animate({
-            scrollTop: $($(this).attr('href')).offset().top - 160
-        }, 300);
-        return false;
-    });
-}
-scrollNav();
-
